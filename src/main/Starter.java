@@ -1,9 +1,15 @@
 package main;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Starter extends Application{
@@ -14,13 +20,11 @@ public class Starter extends Application{
 
 	@Override
 	public void start(Stage stage) throws Exception {
-		stage.setTitle("Test");
-		Button btn = new Button();
-		btn.setText("Hello World");
-		StackPane root = new StackPane();
-		root.getChildren().add(btn);
-		stage.setScene(new Scene(root, 1280, 720));
-		stage.show();
+		Parent root = FXMLLoader.load(getClass().getResource("/view/menu.fxml"));
+        Scene scene = new Scene(root, 300, 275);
+        stage.setTitle("FXML Welcome");
+        stage.setScene(scene);
+        stage.show();
 	}
 
 }
