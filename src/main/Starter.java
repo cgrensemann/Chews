@@ -1,18 +1,10 @@
 package main;
 
+import controller.MainController;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class Starter extends Application{
+public class Starter extends Application {
 
 	public static void main(String[] args) {
 		launch(args);
@@ -20,11 +12,8 @@ public class Starter extends Application{
 
 	@Override
 	public void start(Stage stage) throws Exception {
-		Parent root = FXMLLoader.load(getClass().getResource("/view/menu.fxml"));
-        Scene scene = new Scene(root, 300, 275);
-        stage.setTitle("FXML Welcome");
-        stage.setScene(scene);
-        stage.show();
+		MainController control = new MainController(stage);
+        control.showMenu();
+        
 	}
-
 }
