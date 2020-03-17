@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" fx:controller="view.Field" >
+	<HBox alignment="CENTER">
+    	<children>
+        	<Label text="Here will be the game">
+    	</children>
+    </HBox>
+</VBox>
