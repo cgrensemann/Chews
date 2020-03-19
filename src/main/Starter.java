@@ -14,6 +14,5 @@ public class Starter extends Application {
 	public void start(Stage stage) throws Exception {
 		MainController control = new MainController(stage);
         control.showMenu();
-        
 	}
 }
